@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions</title>
+        <script>
+            function computerMove(){
+                let computerResult = '';
+                const a = Math.random();
+                if(a>=0 && a<1/3)
+                        {
+                            computerResult = 'rock';
+                        }
+                else if(a>=1/3 && a<2/3){
+                    computerResult = 'paper';
+                }
+                else if(a>=2/3 && a<1){
+                    computerResult = 'scissors';
+                }
+                return computerResult;
+            }
+         
+        function rock(){
+         
+            let result = '';
+            const name ='Vatsalya';
+            let compresult = computerMove();
+            if( compresult ==='rock')
+               {
+                result = 'Tie, both choose Rock';
+               }
+            else if(compresult === 'paper'){
+                result = `System wins against ${name}, system choose ${compresult} and you choose rock`;
+            }
+            else if(compresult === 'scissors')
+            {
+                 
+                   result = `${name} wins against System, system choose ${compresult} and you choose rock`;
+            }
+         
+            return result;
+
+        }
+        function paper(){
+         
+         let result = '';
+         const name ='Vatsalya';
+         let compresult = computerMove();
+         if( compresult ==='rock')
+            {
+                result = `${name} wins against System, system choose ${compresult} and you choose paper`;
+             
+            }
+         else if(compresult === 'paper'){
+            
+            result = `Tie, you both choose paper `;
+         }
+         else if(compresult === 'scissors')
+         {
+            result = `System wins against ${name}, system choose ${compresult} and you choose paper`;
+         }
+         
+         return result;
+
+     }
+     function scisors(){
+         
+         let result = '';
+         const name ='Vatsalya';
+         let compresult = computerMove();
+         if( compresult ==='rock')
+            {
+                result = `System wins against ${name}, system choose ${compresult} and you choose Scissors`;
+            }
+         else if(compresult === 'paper'){
+            result = `${name} wins against System, system choose ${compresult} and you choose scissors`;
+         }
+         else if(compresult === 'scissors')
+         {
+            result = `Tie, you both choose scissors `;
+         }
+
+         return result;
+
+     }
+        </script>
+        
+    </head>
+    <body>
+        <image src="Rock.PNG" onclick="rock()"/>
+        <image src="paper.PNG" onclick="paper()"/>
+        <image src="cissors.PNG" onclick="scisors()"/>
+    </body>
+</html>
